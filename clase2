@@ -1,0 +1,16 @@
+#Volumen
+r=float(input('Ingrese el radio: '))
+V=(4/3)*(3.1416)*(r**3)
+V=V*1000
+print('El volumen de un recipiente de radio '\
+    ,r,'metros es ',round(V,2), 'Litros')
+
+#Cuadratica
+import math as m
+
+a=int(input('Ingrese a: '))
+b=int(input('Ingrese b: '))
+c=int(input('Ingrese c: '))
+x1=(-b+m.sqrt(b**2-4*a*c))/(2*a)
+x2=(-b-m.sqrt(b**2-4*a*c))/(2*a)
+print('las soluciones son',x1,'y',x2)
