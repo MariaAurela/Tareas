@@ -1,0 +1,113 @@
+def matrix(nombre,surname):
+    print('Bienvenido a la matrix',nombre, surname)
+    print(f'Ejecutado desde {__name__}')
+
+def operacion():
+    num1 = int(input('Ingrese un número: '))
+    num2 = int(input('ingrese otro número: '))
+    r = num1*num2
+    print(r)
+
+if __name__=="__main__":
+    matrix('Falcao','Garcia')
+
+    #
+    import Fcn_ext
+import Fun3
+
+def app():
+    print('Inicio')
+    nombre = input('Ingrese su nombre: ')
+    surname = input('Ingrese su apellido: ')
+    print('--------------')
+    Fcn_ext.matrix(nombre, surname)
+    print('--------------')
+    print(f'Ejecutado desde {__name__}')
+    print('**************')
+    a = int(input('Ingrese un número: '))
+    b = int(input('ingrese otro número: '))
+    Fun3.suma(a,b)
+    print('**************')
+    #s()
+
+if __name__=="__main__":
+    app()
+
+    #
+
+    #Funcion con parametros y retorno
+
+def suma(num1,num2):
+    r=num1+num2
+    return r
+
+
+print('Inicio de programa')
+a=int(input('Ingrese un número: '))
+b=int(input('ingrese otro número: '))
+resultado=suma(a,b)
+print(resultado)
+print('Fin del programa')   
+
+#
+#Funcion con parametros y sin retorno
+
+def suma(num1,num2):
+    r=num1+num2
+    print(r)
+
+
+
+print('Inicio de programa')
+a=int(input('Ingrese un número: '))
+b=int(input('ingrese otro número: '))
+suma(a,b)
+
+print('Fin del programa')
+
+#
+# Funcion sin parametros y sin retorno
+
+def suma(num1,num2):
+    r = num1+num2
+    print(r)
+    print(f'Ejecutado desde {__name__}')
+
+
+if __name__=="__main__":
+    print('Inicio de prueba')
+
+    suma(10,15)
+
+    print('Fin del prueba')
+
+    #
+    import Fcn_Tupla
+
+def main():
+    a=''
+    pal=''
+    while a != 'exit':
+        pal += (f' {a}')
+        a=input('Ingrese un dato: ')
+
+    Fcn_Tupla.app(pal,i=1)
+
+
+if __name__=="__main__":
+    main()
+else:
+    Fcn_Tupla.app(3,4,56,67,78,a=1,i=2,k=4)
+
+    #
+    import random as rd
+
+def main():
+    a=''
+    pal='David'
+    while a != 'exit':
+        print(rd.choice(pal))
+        a=input('oprima enter ')
+
+if __name__=="__main__":
+    main()
