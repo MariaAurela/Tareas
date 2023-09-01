@@ -1,0 +1,69 @@
+Desarrollar los siguientes programas con un menú de inicio:
+
+
+
+1. Realizar un programa que solicite al usuario una letra del abecedario,   
+
+   verifique si el carácter es vocal o consonante
+
+letra_1 = input("Ingrese una letra del abecedario: ")
+
+if (letra_1 >= 'a' and letra_1 <= 'z') or (letra_1 >= 'A' and letra_1 <= 'Z'):
+    if letra_1 == 'a' or letra_1 == 'A':
+        print("La letra", letra_1, "es una vocal.")
+    elif letra_1 == 'e' or letra_1 == 'E':
+        print("La letra", letra_1, "es una vocal.")
+    elif letra_1 == 'i' or letra_1 == 'I':
+        print("La letra", letra_1, "es una vocal.")
+    elif letra_1 == 'o' or letra_1 == 'O':
+        print("La letra", letra_1, "es una vocal.")
+    elif letra_1 == 'u' or letra_1 == 'U':
+        print("La letra", letra_1, "es una vocal.")
+    else:
+        print("La letra", letra_1, "es una consonante.")
+else:
+    print("Por favor, ingrese una letra del abecedario.")
+
+
+
+2. Realice un programa para cobrar el tiempo de parqueo en un 
+
+    estacionamiento, donde se cobra $139 el minuto. mostrar el valor 
+
+    total, discriminando el IVA, aproximando a la cifra de $50 siguiente. 
+
+print('Bienvenido al parqueadero')
+t=float(input('Por favor, ingrese su tiempo en el parqueadero en minutos : '))
+tem=t*139
+iva=0.19
+con_iva=tem*iva
+iva_1=tem+con_iva
+aproximado=round(iva_1/50)*50
+print('Estuvo',t,'min','Por lo cual su precio a pagar sin iva es : $',tem, )
+print('El 19% de su pago',tem,'es : $',con_iva,)
+print('Su precio a pagar incluido el iva es $ ',aproximado,)
+
+
+3. Realizar un programa en el que se soliciten tres longitudes y con 
+
+    estos valores se determine si se puede hacer o no un triangulo. En el 
+
+    caso que se forme un triangulo, indicar si este es equilátero, isósceles  
+
+    o escaleno. 
+
+
+    a = float(input('Ingrese el lado a de su triángulo: '))
+b = float(input('Ingrese el lado b de su triángulo: '))
+c = float(input('Ingrese el lado c de su triángulo: '))
+
+if a + b > c and a + c > b and b + c > a:
+    print('Es posible hacer un triángulo')
+    if a == b or b == c or a == c:
+        print('Triángulo isósceles')
+    elif a == b and b == c:
+        print('Triángulo equilátero')
+    else:
+        print('Triángulo escaleno')
+else:
+    print('No es posible formar un triángulo')
