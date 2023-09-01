@@ -1,0 +1,80 @@
+Realice un programa que calcule el módulo de un vector, junto con sus componentes rectangulares. (Debe solicitar las coordenadas de origen y fin del vector) 
+
+import math
+
+# Solicitar las coordenadas del origen y fin del vector al usuario
+x1 = float(input("Ingrese la coordenada x del origen: "))
+y1 = float(input("Ingrese la coordenada y del origen: "))
+x2 = float(input("Ingrese la coordenada x del final: "))
+y2 = float(input("Ingrese la coordenada y del final: "))
+
+# Calcular el módulo del vector
+dx = x2 - x1
+dy = y2 - y1
+modulo = math.sqrt(dx**2 + dy**2)
+
+# Imprimir los resultados
+print(f"El módulo del vector es: {modulo}")
+print(f"Las componentes rectangulares del vector son: Dx = {dx}, Dy = {dy}")
+
+solucion2
+
+import math
+
+# Función para calcular el módulo de un vector
+def calcular_modulo(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    modulo = math.sqrt(dx**2 + dy**2)
+    return modulo
+
+# Función para calcular las componentes rectangulares de un vector
+def calcular_componentes(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    return dx, dy
+
+# Solicitar las coordenadas del origen y fin del vector al usuario
+x1 = float(input("Ingrese la coordenada x del origen: "))
+y1 = float(input("Ingrese la coordenada y del origen: "))
+x2 = float(input("Ingrese la coordenada x del final: "))
+y2 = float(input("Ingrese la coordenada y del final: "))
+
+# Calcular el módulo del vector
+modulo = calcular_modulo(x1, y1, x2, y2)
+
+# Calcular las componentes rectangulares del vector
+dx, dy = calcular_componentes(x1, y1, x2, y2)
+
+# Imprimir los resultados
+print(f"El módulo del vector es: {modulo}")
+print(f"Las componentes rectangulares del vector son: Dx = {dx}, Dy = {dy}")
+
+
+Utilizando el programa que determina cuales son los divisores de un número, imprima la cantidad de números perfectos solicitados por el usuario (máximo 10). (Un número perfecto es aquel cuya suma de divisores menos el número original, coinciden con dicho número)
+
+def calcular_divisores(numero):
+    divisores = [1]
+    for i in range(2, numero // 2 + 1):
+        if numero % i == 0:
+            divisores.append(i)
+    return divisores
+
+def es_numero_perfecto(numero):
+    divisores = calcular_divisores(numero)
+    suma_divisores = sum(divisores)
+    return suma_divisores == numero
+
+numeros_perfectos = []
+cantidad_perfectos = 0
+numero = 1
+
+while cantidad_perfectos < 10 and numero <= 10000:  # Limitamos la búsqueda hasta 10 números perfectos o un máximo de 10,000
+    if es_numero_perfecto(numero):
+        numeros_perfectos.append(numero)
+        cantidad_perfectos += 1
+    numero += 1
+
+print("Los primeros 10 números perfectos son:")
+for num in numeros_perfectos:
+    print(num)
