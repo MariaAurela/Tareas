@@ -1,0 +1,27 @@
+Realizar un programa donde se solicite un nombre y seguido en pantalla se imprima el siguiente mensaje: "Estas en la matrix, [Nombre]"
+
+n= input('ingrese su nombre : ')
+print('Estas en la matriz',n,)
+
+Realizar un programa que solicite una medida en pulgadas (decimal) y en pantalla imprima la respectiva conversión en milimetros.
+
+med=float(input('Ingrese la medida en pulgadas: '))
+con=2.54
+con=2.54*med
+print('La medida en pulgadas',med,'in','convertida a milimetros, es',con,'mm',)
+
+Realice un programa que solicite una temperatura en escala Fº (decimal) y muestre el equivalente en grados Cº.
+
+tem=float(input('ingrese la temperatura en Farenheit : '))
+con=(tem-32)*5/9
+print('La temperatura convertida a celsius es :',round(con,4),)
+
+
+Realizar un programa que calcule el valor de IVA de un producto. (IVA=19%).
+precio = float(input("Ingrese el precio del producto: "))
+iva = 0.19
+
+valor_iva = precio * iva
+
+print("El valor del IVA es :", valor_iva,'$')
+
