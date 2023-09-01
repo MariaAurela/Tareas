@@ -1,0 +1,77 @@
+ Realice un programa que genere 15 números aleatorios y los almacene dentro de una lista. Posteriormente ordene dichos elementos de menor a mayor
+ import random
+
+# Generar 15 números aleatorios y almacenarlos en una lista
+numeros_aleatorios = [random.randint(1, 100) for _ in range(15)]
+
+# Mostrar la lista de números antes de ordenar
+print("Lista de números antes de ordenar:")
+print(numeros_aleatorios)
+
+# Ordenar la lista de números de menor a mayor
+numeros_aleatorios.sort()
+
+# Mostrar la lista de números ordenados
+print("\nLista de números ordenados de menor a mayor:")
+print(numeros_aleatorios)
+
+
+
+Realice un programa que solicite al usuario el nombre de un mes del año, posteriormente debe entregar como resultado el número de días que tiene el mes, junto con los festivos correspondientes. (ej: Marzo ==> 20, día de San José). 
+
+
+
+
+# Solicitar al usuario el nombre del mes
+mes = input("Ingrese el nombre de un mes del año: ").lower()
+
+# Verificar si el mes ingresado es válido
+if mes == "enero":
+    cantidad_dias = 31
+    festivos = "Año Nuevo"
+elif mes == "febrero":
+    cantidad_dias = 28  # Suponemos que no es año bisiesto
+    festivos = "Día de San Valentín"
+elif mes == "marzo":
+    cantidad_dias = 31
+    festivos = "Día de San José"
+# Continuar con el resto de los meses...
+
+# Mostrar los resultados
+if mes in ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]:
+    print(f"{mes.capitalize()} tiene {cantidad_dias} días.")
+    if festivos:
+        print(f"Festivos en {mes.capitalize()}: {festivos}")
+    else:
+        print(f"No hay festivos registrados en {mes.capitalize()}.")
+else:
+    print("Mes no válido. Por favor, ingrese un nombre de mes válido.")
+
+Realice un programa que almacene diferentes números escritos por el usuario dentro de una lista hasta que se incluya un número negativo. muestre la lista resultante y después elimine los números duplicados, mostrando también esta segunda lista en pantalla.
+
+# Crear una lista para almacenar los números
+numeros = []
+
+# Solicitar al usuario ingresar números hasta que se incluya un número negativo
+while True:
+    numero = int(input("Ingrese un número (ingrese un número negativo para detenerse): "))
+    if numero < 0:
+        break
+    numeros.append(numero)
+
+# Mostrar la lista resultante con los números ingresados
+print("Lista original:")
+print(numeros)
+
+# Eliminar los números duplicados
+numeros_sin_duplicados = []
+for numero in numeros:
+    if numero not in numeros_sin_duplicados:
+        numeros_sin_duplicados.append(numero)
+
+# Mostrar la lista sin duplicados
+print("\nLista sin duplicados:")
+print(numeros_sin_duplicados)
+
+
+    
